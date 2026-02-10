@@ -1,5 +1,10 @@
-#include <stdio.h>
-void main()
-{
-  printf("Hello"\n);
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jenkins Test Page</title>
+</head>
+<body>
+    <h1>Hello from Jenkins CI/CD 🚀</h1>
+    <p>If you can see this, Jenkins build worked!</p>
+</body>
+</html>
