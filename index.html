@@ -1,50 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Jenkins CI/CD Demo</title>
+    <title>DevOps CI/CD Portal</title>
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #ff6a00, #ee0979, #00c6ff);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            display: flex;
+            width: 900px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
         }
 
-        h1 {
-            margin-bottom: 15px;
-            font-size: 32px;
+        .left {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 60px 40px;
         }
 
-        p {
+        .left h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .left p {
             font-size: 18px;
+            line-height: 1.6;
         }
 
-        .footer {
+        .right {
+            flex: 1;
+            padding: 60px 40px;
+        }
+
+        .right h2 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .input-box input:focus {
+            border-color: #764ba2;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .footer-text {
             margin-top: 20px;
             font-size: 14px;
-            opacity: 0.8;
+            color: #777;
+            text-align: center;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>🚀 Jenkins CI/CD is Working!</h1>
-        <p>This page is deployed successfully from your EC2 server.</p>
-        <div class="footer">
-            DevOps Practice Project | AWS + Jenkins
+
+        <div class="left">
+            <h1>🚀 CI/CD Portal</h1>
+            <p>
+                Welcome to your DevOps deployment platform.
+                Jenkins + AWS + GitHub integration is live.
+                Push your code and watch automation happen!
+            </p>
         </div>
+
+        <div class="right">
+            <h2>Sign In</h2>
+
+            <div class="input-box">
+                <input type="text" placeholder="Username">
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password">
+            </div>
+
+            <button class="btn">Login</button>
+
+            <div class="footer-text">
+                DevOps Practice Project | AWS EC2 Deployment
+            </div>
+        </div>
+
     </div>
+
 </body>
 </html>
